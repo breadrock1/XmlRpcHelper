@@ -2,11 +2,11 @@
 
 ## What is WordPress?
 
-	Wordpress one of the most famous and popular CMS. This managment system allow comfortable creating, editing and monitoring any own websites.
+Wordpress one of the most famous and popular CMS. This managment system allow comfortable creating, editing and monitoring any own websites.
 
 ## What is xmlrpc.php in WordPress?
 
-	It's actually an API which is provided by Wordpress CMS. This functionality helps to developers make ability to control your website from any devices. Abilities while using this remote protocol control:
+It's actually an API which is provided by Wordpress CMS. This functionality helps to developers make ability to control your website from any devices. Abilities while using this remote protocol control:
 	1) Publish a post
 	2) Edit a post
 	3) Delete a post.
