@@ -82,7 +82,7 @@ if __name__ == '__main__':
     ping.add_argument('-u', type=str, required=True, metavar='--url', help='Specify url address')
 
     brute.add_argument('-l', type=str, required=False, metavar='--login', help='Specify login')
-    brute.add_argument('-p', type=str, required=False, metavar='--passwdor-wordlist', help='Specify path to wordlist')
+    brute.add_argument('-p', type=str, required=False, metavar='--pass-wordlist', help='Specify path to wordlist')
     brute.add_argument('-u', type=str, required=True, metavar='--url', help='Specify url address')
 
     ping.set_defaults(mode='pingback.ping')
@@ -91,3 +91,12 @@ if __name__ == '__main__':
 
     arguments = argumentParser.parse_args()
     selectScriptMode(args=arguments)
+
+
+
+# -l
+# admin
+# -p
+# /Users/breadrock/Instruments/SecLists/Passwords/cirt-default-passwords.txt
+# -u
+# http://10.129.79.114/xmlrpc.php
