@@ -1,5 +1,10 @@
 # XmlRpcHelper
 
+![version](https://img.shields.io/badge/version-1.0.0-blue)
+[![Build Status](https://travis-ci.com/username/projectname.svg?branch=master)](https://travis-ci.com/username/projectname)
+
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+
 ## What is WordPress?
 
 Wordpress one of the most famous and popular CMS. This managment system allow comfortable creating, editing and monitoring any own websites.
