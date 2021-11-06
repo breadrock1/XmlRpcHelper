@@ -53,7 +53,8 @@ class XmlRpcRequest(object):
                         </methodCall>
                 ''',
                 headers=self.custom_header,
-                allow_redirects=True
+                allow_redirects=True,
+                timeout=200
             )
 
             return response.text
