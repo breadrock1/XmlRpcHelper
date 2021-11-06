@@ -10,7 +10,7 @@
 
 ## What is WordPress?
 
-Wordpress one of the most famous and popular CMS. This managment system allow comfortable creating, editing and monitoring any own websites.
+Wordpress one of the most famous and popular CMS. This management system allow comfortable creating, editing and monitoring any own websites.
 
 ## What is xmlrpc.php in WordPress?
 
@@ -22,12 +22,12 @@ It's actually an API which is provided by Wordpress CMS. This functionality help
 	5) Get a list of comments
 	6) Edit comments
 	
-!!! Using this service is unsafe coz any person can use this functionality if you have weeak passwords or other misconfiguration...
+!!! Using this service is unsafe because any person can use this functionality if you have weak passwords or other misconfiguration...
 
 ## XmlRpcHelper
-This simple python script automate process of extrating information or getting access by xmlrpc
+This simple python script automate process of extracting information or getting access by xmlrpc
 
-Usage: ./XmlPrcHelper.py MODE {AllMethods | Ping | Bruting} -u URL
+Usage: ./launch.py MODE {AllMethods | Ping | Bruting} -u URL
 	
 	Script modes (Select one of those methods and '--help' to get more information about options):
 	1. pingback.ping        - This method allow you to ping back on our server, you can use netcat, 
