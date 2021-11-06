@@ -17,7 +17,7 @@ def main() -> None:
                 3. system.listMethods   - This method allow to get all accessible methods from Wordpress CMS.
             ''',
         description='''
-                This simple python script automate process of extrating information or getting access by xmlrpc
+                This simple python script automate process of extracting information or getting access by xmlrpc
             ''',
         add_help=True,
         allow_abbrev=True
@@ -25,7 +25,7 @@ def main() -> None:
 
     subArgumentParser = argumentParser.add_subparsers(title='Script Mods', dest=mode)
     ping = subArgumentParser.add_parser('pingback.ping', help='ping back feature')
-    brute = subArgumentParser.add_parser('wp.getUsersBlogs', help='brute force creds')
+    brute = subArgumentParser.add_parser('wp.getUsersBlogs', help='brute force credentials')
     methods = subArgumentParser.add_parser('system.listMethods', help='get all accessible methods')
 
     methods.add_argument('-u', type=str, required=True, metavar='--url', help='Specify url address')

