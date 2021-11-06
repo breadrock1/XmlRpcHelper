@@ -58,13 +58,15 @@ def main() -> None:
 
     methods.add_argument('-u', type=str, required=True, metavar='--url', help='Specify url address')
 
-    ping.add_argument('-s', type=str, required=True, metavar='--src', help='Specify source address (it\'s your server)')
-    ping.add_argument('-d', type=str, required=True, metavar='--dst', help='Specify destination address (it\'s target server)')
-    ping.add_argument('-u', type=str, required=True, metavar='--url', help='Specify url address')
+    ping.add_argument('-u', type=str, required=True, metavar='--url-address', help='Specify url address')
+    ping.add_argument('-s', type=str, required=True, metavar='--src-address',
+                      help='Specify source address (it\'s your server)')
+    ping.add_argument('-d', type=str, required=True, metavar='--dst-address',
+                      help='Specify destination address (it\'s target server)')
 
-    brute.add_argument('-u', type=str, required=True, metavar='--url', help='Specify url address')
+    brute.add_argument('-u', type=str, required=True, metavar='--url-address', help='Specify url address')
     brute.add_argument('-l', type=str, required=False, metavar='--login', help='Specify login')
-    brute.add_argument('-p', type=str, required=False, metavar='--pass-wordlist', help='Specify path to wordlist')
+    brute.add_argument('-p', type=str, required=False, metavar='--wordlist-passwords', help='Specify path to wordlist')
 
     ping.set_defaults(mode='pingback.ping')
     brute.set_defaults(mode='wp.getUsersBlogs')
