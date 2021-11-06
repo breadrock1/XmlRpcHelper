@@ -18,7 +18,7 @@ Email: breadrock1@gmail.com
 
 """
 
-from argparse import ArgumentParser, Namespace
+from argparse import ArgumentParser
 
 from src.XmlRpcHelper import XmlRpcHelper
 
