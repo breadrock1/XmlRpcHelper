@@ -8,6 +8,7 @@
 
 ![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=darkgreen)
 
+
 ## What is WordPress?
 
 Wordpress one of the most famous and popular CMS. This managment system allow comfortable creating, editing and monitoring any own websites.
