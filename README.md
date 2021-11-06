@@ -15,14 +15,14 @@ Wordpress one of the most famous and popular CMS. This management system allow c
 ## What is xmlrpc.php in WordPress?
 
 It's actually an API which is provided by Wordpress CMS. This functionality helps to developers make ability to control your website from any devices. Abilities while using this remote protocol control:
-	1) Publish a post
-	2) Edit a post
-	3) Delete a post.
-	4) Upload a new file (e.g. an image for a post)
-	5) Get a list of comments
-	6) Edit comments
-	
-!!! Using this service is unsafe because any person can use this functionality if you have weak passwords or other misconfiguration...
+1) Publish a post;
+2) Edit a post;
+3) Delete a post;
+4) Upload a new file (e.g. an image for a post);
+5) Get a list of comments;
+6) Edit comments.
+
+<b>!!! Using this service is unsafe because any person can use this functionality if you have weak passwords or other misconfiguration...</b>
 
 ## XmlRpcHelper
 This simple python script automate process of extracting information or getting access by xmlrpc
@@ -67,9 +67,3 @@ GNU General Public License for more details.
 Author: Bread White
 Date:   2021 year
 Email: breadrock1@gmail.com
-
-## TODO
-
-1. Realize pytest module to test each module functionality;
-2. Realize specified command line arguments validation.
-
