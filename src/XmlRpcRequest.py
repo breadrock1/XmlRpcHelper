@@ -9,12 +9,16 @@ class XmlRpcRequest(object):
     def __init__(self, url, method):
         self.url = url
         self.method = method
-        self.user_agent = UserAgent().load()
 
-    def isInvalidCreds(self, recv_data) -> bool:
+        self.custom_header = {
+                'User-Agent': UserAgent().load(),
+                'Content-Type': 'application/xml'
+        }
+
+    def credentialsValidation(self, recv_data) -> bool:
         return not (recv_data.__contains__('Incorrect') or recv_data.__contains__('Insufficient'))
 
-    def sendRequest(self, first_param='', second_param='') -> AnyStr:
+    def sendHttpRequest(self, first_param='', second_param='') -> AnyStr:
         try:
             response = post(
                 self.url,
@@ -27,11 +31,8 @@ class XmlRpcRequest(object):
                                 <param><value>{second_param}</value></param>
                             </params>
                         </methodCall>
-                    ''',
-                headers={
-                    'User-Agent': self.user_agent,
-                    'Content-Type': 'application/xml'
-                },
+                ''',
+                headers=self.custom_header,
                 allow_redirects=True
             )
 
