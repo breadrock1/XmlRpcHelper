@@ -51,8 +51,7 @@ def main() -> None:
     methods.add_argument('-u', type=str, required=True, metavar='--url', help='Specify url address')
 
     ping.add_argument('-s', type=str, required=True, metavar='--src', help='Specify source address (it\'s your server)')
-    ping.add_argument('-d', type=str, required=True, metavar='--dst',
-                      help='Specify destination address (it\'s target server)')
+    ping.add_argument('-d', type=str, required=True, metavar='--dst', help='Specify destination address (it\'s target server)')
     ping.add_argument('-u', type=str, required=True, metavar='--url', help='Specify url address')
 
     brute.add_argument('-l', type=str, required=False, metavar='--login', help='Specify login')
