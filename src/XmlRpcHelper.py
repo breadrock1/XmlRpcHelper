@@ -2,7 +2,7 @@ from argparse import Namespace
 from typing import List, AnyStr
 from logging import error, info, warning
 
-from XmlRpcRequest import XmlRpcRequest
+from src.XmlRpcRequest import XmlRpcRequest
 
 
 class XmlRpcHelper(object):
@@ -34,9 +34,8 @@ class XmlRpcHelper(object):
     def __init__(self, args: Namespace):
         self.args = args
 
-        # TODO: add module with args validation
         self.url = args.u
-        self.method = args.m
+        self.method = args.mode
 
         self.xmlRpcRequest = XmlRpcRequest(url=self.url, method=self.method)
 
