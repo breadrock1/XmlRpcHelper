@@ -1,5 +1,4 @@
 from typing import AnyStr
-from logging import exception
 
 from fake_useragent import UserAgent
 from requests import post, RequestException
@@ -31,7 +30,7 @@ class XmlRpcRequest(object):
         self.method = method
 
         self.custom_header = {
-                'User-Agent': UserAgent().load(),
+                'User-Agent': UserAgent().random,
                 'Content-Type': 'application/xml'
         }
 
@@ -59,5 +58,4 @@ class XmlRpcRequest(object):
 
             return response.text
         except RequestException as e:
-            exception(msg=f"Error while sending POST request: {e.strerror}")
             return f"Error! {e.strerror}"
