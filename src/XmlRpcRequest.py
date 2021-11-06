@@ -10,8 +10,6 @@ class XmlRpcRequest(object):
         This class provides ability to send http-request to specified
         URL-address by user as XML-document.
 
-        ...
-
         Attributes
         ----------
         url : str
@@ -21,8 +19,6 @@ class XmlRpcRequest(object):
 
         Methods
         -------
-        says(sound=None)
-            Prints the animals name and what sound it makes.
         credentialsValidation(self, recv_data) -> bool
             Returns True if response data status contains is Incorrect
             or Insufficient else returns False.
