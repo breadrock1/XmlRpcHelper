@@ -34,7 +34,7 @@ from src.XmlRpcHelper import XmlRpcHelper
 def main() -> None:
     argumentParser = ArgumentParser(
         prog='XmlRpcHelper',
-        usage='''./XmlPrcHelper.py MODE {AllMethods | Ping | Bruting} -u URL
+        usage='''./launch.py MODE {AllMethods | Ping | Bruting} -u URL
                 Mods details (Select one of those methods and '--help' to get more information about options):
                 1. pingback.ping        - This method allow you to ping back on our server, you can use netcat, 
                                           nodejs, python server or other ways. All what you need just set source 
