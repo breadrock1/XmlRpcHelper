@@ -24,9 +24,20 @@ It's actually an API which is provided by Wordpress CMS. This functionality help
 <b>!!! Using this service is unsafe because any person can use this functionality if you have weak passwords or other misconfiguration...</b>
 
 ## XmlRpcHelper
+
 This simple python script automate process of extracting information or getting access by xmlrpc
 
-```bash
+### Building
+
+Just need install requirements:
+
+```shell
+    pip install -r requirements.txt
+```
+
+### Launching
+
+```shell
     Usage: ./launch.py MODE {AllMethods | Ping | Bruting} -u URL
         
     Script modes (Select one of those methods and '--help' to get more information about options):
